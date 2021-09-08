@@ -1,5 +1,5 @@
 
-	<?php include('Common/header.php') ?>
+	<?php include('common/header.php') ?>
 	<div class="home-div"></div>
 		<div class="w-100 in-ad-ap">
 			<div class="row m-auto text-center">
@@ -13,8 +13,8 @@
 				ICBS provides a harmonious environment and learning opportunities  to its students regardless of their gender, socioeconomic background, religious beliefs and regional differences.
 			</p>
 		</div>
-	<?php include('Common/cards.php') ?>
-	<?php include('Common/footer.php') ?>
+	<?php include('common/cards.php') ?>
+	<?php include('common/footer.php') ?>
 </body>
 </html>
 
