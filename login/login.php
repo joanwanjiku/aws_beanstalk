@@ -10,12 +10,10 @@ session_start();
 
         $query="select * from login where user_id='$username' and Password='$password' ";
         $result=mysqli_query($con,$query);
-        echo $result;
         if (mysqli_num_rows($result)>0) {
             while ($row=mysqli_fetch_array($result)) {
                 if ($row["Role"]=="Admin")
                 {
-                    echo "logged in as admin";
                     $_SESSION['LoginAdmin']=$row["user_id"];
                     header('Location: ../admin/admin-index.php');
                 }
@@ -49,6 +47,7 @@ session_start();
             <div class="logo-div text-center">
                 <img src="../Images/icbs_logo.png" alt="" class="align-items-center" width="100" height="100">
             </div>
+
             <div class="login-padding">
                 <h2 class="text-center text-white">LOGIN</h2>
                 <form class="p-1" action="login.php" method="POST">
