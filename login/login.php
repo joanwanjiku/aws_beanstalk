@@ -10,6 +10,7 @@ session_start();
 
         $query="select * from login where user_id='$username' and Password='$password' ";
         $result=mysqli_query($con,$query);
+        echo $result;
         if (mysqli_num_rows($result)>0) {
             while ($row=mysqli_fetch_array($result)) {
                 if ($row["Role"]=="Admin")
