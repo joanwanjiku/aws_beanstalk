@@ -14,6 +14,7 @@ session_start();
             while ($row=mysqli_fetch_array($result)) {
                 if ($row["Role"]=="Admin")
                 {
+                    echo "logged in as admin";
                     $_SESSION['LoginAdmin']=$row["user_id"];
                     header('Location: ../admin/admin-index.php');
                 }
